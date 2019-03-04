@@ -16,6 +16,11 @@ const zhReadme = `issue 列表只接受 bug 报告或是新功能请求 (feature
 最后，在开 issue 前，可以先搜索一下以往的旧 issue - 你遇到的问题可能已经有人提了，也可能已经在最新版本中被修正。注意：如果你发现一个已经关闭的旧 issue 在最新版本中仍然存在，请不要在旧 issue 下面留言，而应该用下面的表单开一个新的 issue。
 `
 
+const placeholder = `1. Go to '...'
+2. Click on '....'
+3. Scroll down to '....'
+4. See error`
+
 module.exports = {
   logo: 'https://taro-ui.aotu.io/favicons/favicon-32x32.png', // 页面 logo
   repo: 'NervJS/taro-ui', // 仓库地址，会根据此项配置跳转到 github issue 页面，同时也会根据仓库名获取版本信息
@@ -34,10 +39,10 @@ module.exports = {
       formItems: [
         {
           label: {
-            zh: '版本信息',
+            zh: 'Taro UI 版本信息',
             en: 'version'
           },
-          mdTitle: '版本信息',
+          mdTitle: 'Taro UI 版本信息',
           type: 'version',
           required: true,
         },
@@ -62,12 +67,7 @@ module.exports = {
           type: 'textarea',
           required: true,
           mdTitle: '复现步骤',
-          placeholder: `
-            1. Go to '...'
-            2. Click on '....'
-            3. Scroll down to '....'
-            4. See error
-          `,
+          placeholder: placeholder,
         },
         {
           label: {
